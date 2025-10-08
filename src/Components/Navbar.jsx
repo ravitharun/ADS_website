@@ -1,24 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaHome, FaInfoCircle, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom"; // <-- Import Link
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const navLinks = [
-    { name: "Home", to: "/", icon: <FaHome /> },
-    { name: "Work", to: "work", icon: <FaHome /> },
-    { name: "About", to: "/about", icon: <FaInfoCircle /> },
-    { name: "Contact", to: "/contact", icon: <FaEnvelope /> },
-  ];
-
-  // Track scroll to change navbar background
+  // Detect scroll to change background
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -38,27 +29,49 @@ function Navbar() {
         {/* Logo */}
         <div className="flex items-center gap-2 cursor-pointer">
           <img
-            src="/logo.png"
-            alt="Protifilo Logo"
+            src="https://www.logotypes101.com/logos/647/1B2CB7FD06FF2F3991B6C6B60C2F21F3/tn_Company_2_Give.png"
+            alt="Logo"
             className="w-10 h-10 md:w-12 md:h-12 object-contain"
           />
           <span className="text-xl md:text-2xl font-bold font-montserrat">
-            LogoName
+            AdVision
           </span>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 text-lg font-rubik font-medium">
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              <Link
-                to={link.href}
-                className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-all duration-300"
-              >
-                {link.icon} {link.name}
-              </Link>
-            </li>
-          ))}
+        <ul className="hidden md:flex gap-8 text-lg font-medium">
+          <li>
+            <Link
+              to="/"
+              className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-all duration-300"
+            >
+              <FaHome /> Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/work"
+              className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-all duration-300"
+            >
+              <FaHome /> Work
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-all duration-300"
+            >
+              <FaInfoCircle /> About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-all duration-300"
+            >
+              <FaEnvelope /> Contact
+            </Link>
+          </li>
         </ul>
 
         {/* Hamburger Icon */}
@@ -77,18 +90,43 @@ function Navbar() {
         transition={{ duration: 0.3 }}
         className="md:hidden overflow-hidden bg-gray-900/95 backdrop-blur-xl border-t border-white/20 shadow-lg"
       >
-        <ul className="flex flex-col items-center py-6 space-y-4 text-lg font-rubik font-medium">
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              <a
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="flex items-center gap-2 px-6 py-3 rounded-md hover:bg-white/10 transition-all duration-300 w-full justify-center"
-              >
-                {link.icon} {link.name}
-              </a>
-            </li>
-          ))}
+        <ul className="flex flex-col items-center py-6 space-y-4 text-lg font-medium">
+          <li>
+            <Link
+              to="/"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-2 px-6 py-3 rounded-md hover:bg-white/10 transition-all duration-300"
+            >
+              <FaHome /> Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/work"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-2 px-6 py-3 rounded-md hover:bg-white/10 transition-all duration-300"
+            >
+              <FaHome /> Work
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-2 px-6 py-3 rounded-md hover:bg-white/10 transition-all duration-300"
+            >
+              <FaInfoCircle /> About
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-2 px-6 py-3 rounded-md hover:bg-white/10 transition-all duration-300"
+            >
+              <FaEnvelope /> Contact
+            </Link>
+          </li>
         </ul>
       </motion.div>
     </motion.nav>

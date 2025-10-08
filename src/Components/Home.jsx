@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import { Link } from "react-router";
 
 function Home() {
   return (
@@ -45,12 +46,13 @@ function Home() {
           </p>
 
           {/* Call-to-Action Button */}
-          <a
-            href="#work"
-            className="px-8 py-3 bg-blue-600 rounded-lg text-white text-lg font-semibold transition-all duration-300 hover:bg-blue-500 hover:text-white shadow-lg"
-          >
-            View Our Work
-          </a>
+         <Link
+  to="/work"
+  className="px-8 py-3 border-2 border-white bg-transparent rounded-lg text-white text-lg font-semibold transition-all duration-300 hover:border-yellow-400 hover:text-yellow-400 hover:bg-black/50"
+>
+  View Our Work
+</Link>
+
         </div>
       </div>
     </>

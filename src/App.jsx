@@ -5,6 +5,8 @@ import Home from "./Components/Home";
 import Loader from "./Components/Loader";
 import { lazy } from "react";
 import Footer from "./Components/Footer";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
 
 const MarkdownPreview = lazy(() => import("./Components/Home"));
 function App() {
@@ -14,9 +16,9 @@ function App() {
       <Suspense fallback={<Loader />}>
         <MarkdownPreview />
       </Suspense>
-
-      <Work></Work>
-      
+      <Work req={false}></Work>
+      <About req={false} ></About>
+      <Contact></Contact>
     </>
   );
 }
