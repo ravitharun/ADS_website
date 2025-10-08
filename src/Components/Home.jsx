@@ -24,27 +24,48 @@ function Home() {
     <>
       <Navbar />
 
-      {/* Hero Section */}
-      <div
-        className="min-h-screen flex flex-col justify-center items-center text-white px-6 md:px-20"
-        style={{
-          background: "linear-gradient(135deg, #0a0a0a, #1c1c1c, #111111)",
-        }}
-      >
-        <h1 className="text-5xl md:text-7xl font-extrabold font-montserrat mb-6 text-center">
-          Create Ads That Captivate
-        </h1>
-        <p className="text-lg md:text-2xl font-lato text-center max-w-3xl mb-10">
-          We design professional ad campaigns that attract attention and drive
-          results across all digital platforms. Showcase your brand with style
-          and impact.
-        </p>
-        <a
-          href="#work"
-          className="px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-lg text-white text-lg font-raleway transition-all duration-300"
+      {/* Hero Section with Background Video/Image */}
+      <div className="relative min-h-screen flex flex-col justify-center items-center text-white px-6 md:px-20 overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-40"
         >
-          View Our Work
-        </a>
+          <source
+            src="https://www.w3schools.com/howto/rain.mp4" // Example video
+            type="video/mp4"
+          />
+        </video>
+
+        {/* Optional: Background Image instead of video */}
+        {/* <img
+          src="https://source.unsplash.com/1600x900/?advertisement,digital"
+          alt="Background"
+          className="absolute top-0 left-0 w-full h-full object-cover opacity-30"
+        /> */}
+
+        {/* Gradient overlay for dark effect */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black/70 via-black/40 to-black/70"></div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 flex flex-col justify-center items-center text-center">
+          <h1 className="text-5xl md:text-7xl font-extrabold font-montserrat mb-6">
+            Create Ads That Captivate
+          </h1>
+          <p className="text-lg md:text-2xl font-lato max-w-3xl mb-10">
+            We design professional ad campaigns that attract attention and drive
+            results across all digital platforms. Showcase your brand with style
+            and impact.
+          </p>
+          <a
+            href="#work"
+            className="px-8 py-3 bg-blue-600 hover:bg-blue-500 rounded-lg text-white text-lg font-raleway transition-all duration-300"
+          >
+            View Our Work
+          </a>
+        </div>
       </div>
 
       {/* Featured Ads Section */}
