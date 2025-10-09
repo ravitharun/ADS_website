@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router";
-import bgvedio from "./198918-909322169_tiny.mp4"
+import Bgvedio from "./198918-909322169_tiny.mp4"
 function Home() {
   return (
     <>
@@ -18,7 +18,7 @@ function Home() {
         >
           {/* https://www.w3schools.com/howto/rain.mp4 */}
           <source
-            src={bgvedio}
+            src={Bgvedio}
             type="video/mp4"
           />
         </video>
