@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes, FaHome, FaInfoCircle, FaEnvelope } from "react-icons/fa";
+import { FaBars, FaTimes, FaHome, FaInfoCircle, FaEnvelope, FaBriefcase } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -53,7 +53,7 @@ function Navbar() {
               to="/work"
               className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-all duration-300"
             >
-              <FaHome /> Work
+              <FaBriefcase /> Work
             </Link>
           </li>
           <li>
