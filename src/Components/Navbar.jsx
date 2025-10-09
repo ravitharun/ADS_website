@@ -106,7 +106,7 @@ function Navbar() {
               onClick={() => setOpen(false)}
               className="flex items-center gap-2 px-6 py-3 rounded-md hover:bg-white/10 transition-all duration-300"
             >
-              <FaHome /> Work
+              <FaBriefcase /> Work
             </Link>
           </li>
           <li>

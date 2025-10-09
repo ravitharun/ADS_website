@@ -13,10 +13,10 @@ function Contact() {
   return (
     <>
       <Navbar />
+      <div className="mt-30 w-full">
 
-      {/* Footer Spacing */}
-      <div className="pb-16">
         <Footer></Footer>
+     
       </div>
     </>
   );

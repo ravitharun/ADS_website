@@ -1,4 +1,3 @@
-// Work.jsx
 import React, { useEffect } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -40,9 +39,14 @@ const adsData = [
   },
 ];
 
-function Work({ req }) {
+function Work({ req, show }) {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true, easing: "ease-out" });
+    AOS.init({ duration: 1000, once: false, easing: "ease-out" });
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth", // optional for smooth scroll
+    });
   }, []);
 
   return (
@@ -50,7 +54,7 @@ function Work({ req }) {
       <Navbar />
 
       {/* Work Section */}
-      <main className="flex-grow px-6 md:px-20 py-16">
+      <main className="flex-grow px-6 md:px-20 py-16 mt-20">
         {/* Title */}
         <h1
           className="text-5xl md:text-7xl font-extrabold text-center mb-6 bg-clip-text text-transparent"
@@ -58,11 +62,17 @@ function Work({ req }) {
             backgroundImage: "linear-gradient(45deg, #007aff, #616161)",
             fontFamily: "'Monoton', cursive",
           }}
+          data-aos="fade-up"
+          data-aos-duration="1000"
         >
           Our Creative Work
         </h1>
 
-        <p className="text-center text-gray-400 text-lg md:text-xl mb-16 max-w-3xl mx-auto leading-relaxed">
+        <p
+          className="text-center text-gray-400 text-lg md:text-xl mb-16 max-w-3xl mx-auto leading-relaxed"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           Discover how we blend strategy, design, and technology to create ad
           campaigns that leave a lasting impact.
         </p>
@@ -73,7 +83,7 @@ function Work({ req }) {
             <div
               key={ad.id}
               data-aos="fade-up"
-              data-aos-delay={index * 200}
+              data-aos-duration="1000"
               className={`flex flex-col md:flex-row items-center gap-10 ${
                 index % 2 !== 0 ? "md:flex-row-reverse" : ""
               }`}
@@ -109,26 +119,13 @@ function Work({ req }) {
         </div>
       </main>
 
-      {/* Footer */}
-      {req == false ? "" : <Footer />}
+      <div className="w-full">
+        {/* {show != true ? "" : <Footer />} */}
+        {req != false ? <Footer /> : ""}
+        {/* <h3>About</h3> */}
+      </div>
     </div>
   );
 }
 
 export default Work;
-
-{
-  /* background-image: linear-gradient(45deg, #007aff, #616161);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;X */
-}
-{
-  /* Footer (Perfectly Fitted, Full Width) */
-}
-{
-  /* #9d9595    {/* #9d9595    border-radius: 3px;  w-isse,h-isse*/
-}
-
-{
-  /* sub rmv  login-rmv */
-}
