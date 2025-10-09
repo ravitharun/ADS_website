@@ -27,16 +27,18 @@ function Navbar() {
     >
       <div className="flex items-center justify-between px-6 py-4 md:px-12">
         {/* Logo */}
+        <Link to="/">
         <div className="flex items-center gap-2 cursor-pointer">
           <img
             src="https://www.logotypes101.com/logos/647/1B2CB7FD06FF2F3991B6C6B60C2F21F3/tn_Company_2_Give.png"
             alt="Logo"
             className="w-10 h-10 md:w-12 md:h-12 object-contain"
-          />
+            />
           <span className="text-xl md:text-2xl font-bold font-montserrat">
             AdVision
           </span>
         </div>
+            </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-lg font-medium">

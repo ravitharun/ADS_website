@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router";
-
+import bgvedio from "./198918-909322169_tiny.mp4"
 function Home() {
   return (
     <>
@@ -16,8 +16,9 @@ function Home() {
           muted
           className="absolute top-0 left-0 w-full h-full object-cover opacity-40"
         >
+          {/* https://www.w3schools.com/howto/rain.mp4 */}
           <source
-            src="https://www.w3schools.com/howto/rain.mp4"
+            src={bgvedio}
             type="video/mp4"
           />
         </video>
