@@ -119,11 +119,11 @@ function Work({ req, show }) {
         </div>
       </main>
 
-      <div className="w-full">
-        {/* {show != true ? "" : <Footer />} */}
+      {/*       <div className="w-full">
+
         {req != false ? <Footer /> : ""}
-        {/* <h3>About</h3> */}
-      </div>
+        
+      </div> */}
     </div>
   );
 }

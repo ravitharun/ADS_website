@@ -12,7 +12,7 @@ import Aos from "aos";
 const MarkdownPreview = lazy(() => import("./Components/Home"));
 function App() {
   useEffect(() => {
-    // AOS.init({ duration: 1000, once: false, easing: "ease-out" });
+   
     window.scrollTo({
       top: 0,
       left: 0,
@@ -24,11 +24,23 @@ function App() {
   return (
     <>
       {/* <Navbar></Navbar>  */}
-      <Suspense fallback={<Loader />}>
+      
+      {/* <Work req={false}></Work>
+      <About req={false} show={true}></About> */}
+      <section id="home">
+        <Suspense fallback={<Loader />}>
         <MarkdownPreview />
       </Suspense>
-      <Work req={false}></Work>
-      <About req={false} show={true}></About>
+      </section>
+      <section id="work">
+        <Work req={false} />
+      </section>
+      <section id="about">
+        <About req={false} show={true} />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
       {/* <Contact></Contact> */}
     </>
   );

@@ -22,7 +22,6 @@ function Home() {
             type="video/mp4"
           />
         </video>
-
         {/* Gradient Overlay */}
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black/70 via-black/40 to-black/70"></div>
 

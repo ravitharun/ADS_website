@@ -3,10 +3,15 @@ import Navbar from "./Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./Footer";
-
-function About({ req, show }) {
+// { req, show }
+function About() {
   useEffect(() => {
     AOS.init({ duration: 1000, once: false, easing: "ease-out" });
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth", // optional for smooth scroll
+    });
   }, []);
 
   const team = [
@@ -125,12 +130,10 @@ function About({ req, show }) {
           </p>
         </div>
 
-        {/* Full-width Footer INSIDE About section */}
-        <div className="w-full">
+        {/* <div className="w-full">
           {show != true ? "" : <Footer />}
           {req != false ? <Footer /> : ""}
-          {/* <h3>About</h3> */}
-        </div>
+        </div> */}
       </div>
     </>
   );

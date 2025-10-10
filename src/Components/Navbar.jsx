@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes, FaHome, FaInfoCircle, FaEnvelope, FaBriefcase } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaHome,
+  FaInfoCircle,
+  FaEnvelope,
+  FaBriefcase,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -27,52 +34,53 @@ function Navbar() {
     >
       <div className="flex items-center justify-between px-6 py-4 md:px-12">
         {/* Logo */}
-        <Link to="/">
-        <div className="flex items-center gap-2 cursor-pointer">
-          <img
-            src="https://www.logotypes101.com/logos/647/1B2CB7FD06FF2F3991B6C6B60C2F21F3/tn_Company_2_Give.png"
-            alt="Logo"
-            className="w-10 h-10 md:w-12 md:h-12 object-contain"
+        <a href="#home">
+          <div className="flex items-center gap-2 cursor-pointer">
+            <img
+              src="https://www.logotypes101.com/logos/647/1B2CB7FD06FF2F3991B6C6B60C2F21F3/tn_Company_2_Give.png"
+              alt="Logo"
+              className="w-10 h-10 md:w-12 md:h-12 object-contain"
             />
-          <span className="text-xl md:text-2xl font-bold font-montserrat">
-            AdVision
-          </span>
-        </div>
-            </Link>
+            <span className="text-xl md:text-2xl font-bold font-montserrat">
+              AdVision
+            </span>
+            
+          </div>
+        </a>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 text-lg font-medium">
           <li>
-            <Link
-              to="/"
+            <a
+              href="#home"
               className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-all duration-300"
             >
               <FaHome /> Home
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/work"
+            <a
+              href="#work"
               className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-all duration-300"
             >
               <FaBriefcase /> Work
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/about"
+            <a
+              href="#about"
               className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-all duration-300"
             >
               <FaInfoCircle /> About
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/contact"
+            <a
+              href="#contact"
               className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-all duration-300"
             >
               <FaEnvelope /> Contact
-            </Link>
+            </a>
           </li>
         </ul>
 
@@ -94,40 +102,40 @@ function Navbar() {
       >
         <ul className="flex flex-col items-center py-6 space-y-4 text-lg font-medium">
           <li>
-            <Link
-              to="/"
+            <a
+              to="#home"
               onClick={() => setOpen(false)}
               className="flex items-center gap-2 px-6 py-3 rounded-md hover:bg-white/10 transition-all duration-300"
             >
               <FaHome /> Home
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/work"
+            <a
+              href="#work"
               onClick={() => setOpen(false)}
               className="flex items-center gap-2 px-6 py-3 rounded-md hover:bg-white/10 transition-all duration-300"
             >
               <FaBriefcase /> Work
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/about"
+            <a
+              href="#about"
               onClick={() => setOpen(false)}
               className="flex items-center gap-2 px-6 py-3 rounded-md hover:bg-white/10 transition-all duration-300"
             >
               <FaInfoCircle /> About
-            </Link>
+            </a>
           </li>
           <li>
-            <Link
-              to="/contact"
+            <a
+              href="#contact"
               onClick={() => setOpen(false)}
               className="flex items-center gap-2 px-6 py-3 rounded-md hover:bg-white/10 transition-all duration-300"
             >
               <FaEnvelope /> Contact
-            </Link>
+            </a>
           </li>
         </ul>
       </motion.div>

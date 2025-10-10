@@ -43,7 +43,7 @@ function Footer() {
             {["Home", "Work", "About", "Contact"].map((item) => (
               <li key={item}>
                 <Link
-                  to={item==='Home'?"/":`/${item.toLowerCase().replace(" ", "")}`}
+                  to={`#${item.toLowerCase().replace(" ", "")}`}
                   className="hover:text-white hover:translate-x-1 transition-all duration-300 cursor-pointer"
                 >
                   {item}
