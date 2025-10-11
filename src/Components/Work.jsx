@@ -15,7 +15,7 @@ const adsData = [
   },
   {
     id: 2,
-    title: "Brand Awareness Visuals",
+    title: "Brand Awareness VisualS",
     description:
       "Our bold and memorable visuals help brands rise above the noise. Perfect for dark-themed ad spaces and high-impact digital experiences.",
     image:
