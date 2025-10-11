@@ -46,12 +46,12 @@ function Home() {
           </p>
 
           {/* Call-to-Action Button */}
-          <Link
-            to="/work"
+          <a
+            href="/#work"
             className="px-8 py-3 border-2 border-white bg-transparent rounded-lg text-white text-lg font-semibold transition-all duration-300 hover:border-yellow-400 hover:text-yellow-400 hover:bg-black/50"
           >
             View Our Work
-          </Link>
+          </a>
         </div>
       </div>
     </>
