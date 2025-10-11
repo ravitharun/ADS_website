@@ -52,7 +52,7 @@ function Navbar() {
         <ul className="hidden md:flex gap-8 text-lg font-medium">
           <li>
             <a
-              href="#home"
+              href="/#home"
               className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-white/10 transition-all duration-300"
             >
               <FaHome /> Home
@@ -103,7 +103,7 @@ function Navbar() {
         <ul className="flex flex-col items-center py-6 space-y-4 text-lg font-medium">
           <li>
             <a
-              to="#home"
+              href="/#home"
               onClick={() => setOpen(false)}
               className="flex items-center gap-2 px-6 py-3 rounded-md hover:bg-white/10 transition-all duration-300"
             >
